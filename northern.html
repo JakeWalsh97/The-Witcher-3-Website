@@ -92,7 +92,7 @@
                     </li>
                     </ul>
                     <li style="margin-left:1em; margin-top:.7em">
-                        <audio autoplay controls loop id="audio"><source src="music/34 Child of the Elder Blood.mp3" type="audio/mpeg"></audio>   
+                        <audio autoplay controls loop id="audio" onloadeddata="var audioPlayer = this; setTimeout(function() { audioPlayer.play(); }, 2000)"><source src="music/34 Child of the Elder Blood.mp3" type="audio/mpeg"></audio>   
                     </li>
                 </ul>
             </div>
@@ -182,6 +182,14 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+
+    <script>
+    window.onload = function() {
+    var backgroundAudio=document.getElementById("audio");
+    backgroundAudio.volume=0.15;
+    }
+
+    </script>
 
 </body>
 
